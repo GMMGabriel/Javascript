@@ -1,0 +1,49 @@
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 4 - Curso - JavaScript - Módulo 2</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome">
+            <button onclick="adicionar()">Adicionar</button>
+            <ul>
+                
+            </ul>
+        </div>
+        
+        <script>
+            
+            var nomes = ["Diego", "Gabriel", "Lucas"],
+                listElement = document.querySelector('#app ul'),
+                inputElement = document.querySelector('#app input'),
+                btnElement = document.querySelector('#app button')
+            
+            for(nome of nomes){
+                var itemListElement = document.createElement('li'),
+                    textItemListElement = document.createTextNode(nome);
+
+                itemListElement.appendChild(textItemListElement);
+                listElement.appendChild(itemListElement);
+            }
+            
+            function foco(){
+                inputElement.focus();
+            }
+            
+            foco();
+            
+            function adicionar(){
+                var itemListElement = document.createElement('li'),
+                    textItemListElement = document.createTextNode(inputElement.value);
+                
+                itemListElement.appendChild(textItemListElement);
+                listElement.appendChild(itemListElement);
+                
+                inputElement.value = null;
+                foco();
+            }
+            
+        </script>
+    </body>
+</html>

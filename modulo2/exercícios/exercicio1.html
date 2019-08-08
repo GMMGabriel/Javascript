@@ -1,0 +1,31 @@
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 1 - Curso - JavaScript - Módulo 2</title>
+    </head>
+    <body>
+        <div id="app">
+            <button>Novo quadrado</button>
+            <div id="area"></div>
+        </div>
+        
+        <script>
+            
+            var divElement = document.querySelector('#area'),
+                buttonElement = document.querySelector('button');
+            
+            buttonElement.onclick = function(){
+                var boxElement = document.createElement('div');
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#f00';
+                boxElement.style.float = 'left';
+                boxElement.style.marginRight = 10;
+                boxElement.style.marginBottom = 10;
+
+                divElement.appendChild(boxElement);
+            }
+            
+        </script>
+    </body>
+</html>

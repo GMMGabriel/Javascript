@@ -1,0 +1,32 @@
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 5 - Curso - JavaScript - Módulo 1</title>
+    </head>
+    <body>
+        <script>
+            
+            // EXERCÍCIO 5.
+            
+            var usuarios = [
+                {
+                    nome: 'Diego',
+                    habilidades: ['Javascript', 'ReactJS', 'Redux']
+                },
+                {
+                    nome: 'Gabriel',
+                    habilidades: ['VueJS', 'Ruby on Rails', 'Elixir']
+                }
+            ];
+            
+            function habilidadesDosUsuarios(usuarios){
+                for(i = 0; i <= usuarios.length - 1; i++){
+                    console.log('O '+usuarios[i].nome+' possui as habilidades: '+usuarios[i].habilidades.join(', ')+'.');
+                }
+            }
+            
+            habilidadesDosUsuarios(usuarios);
+            
+        </script>
+    </body>
+</html>

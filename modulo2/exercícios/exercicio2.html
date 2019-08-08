@@ -1,0 +1,48 @@
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 2 - Curso - JavaScript - Módulo 2</title>
+    </head>
+    <body>
+        <div id="app">
+            <button>Novo quadrado</button>
+            <div id="area"></div>
+        </div>
+        
+        <script>
+            
+            var divElement = document.querySelector('#area'),
+                buttonElement = document.querySelector('button');
+            
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+            
+//            var newColor = getRandomColor(); // #E943F0
+            
+            buttonElement.onclick = function(){
+                var boxElement = document.createElement('div');
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#f00';
+                boxElement.style.float = 'left';
+                boxElement.style.marginRight = 10;
+                boxElement.style.marginBottom = 10;
+
+                divElement.appendChild(boxElement);
+                
+                boxElement.onmouseover = function(){
+                    boxElement.style.backgroundColor = getRandomColor();
+                }
+            }
+            
+            
+            
+        </script>
+    </body>
+</html>
